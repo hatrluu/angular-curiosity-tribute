@@ -1,0 +1,4 @@
+<div class="image-board">
+    <!-- <img [src]="photo.img_src" alt="{photo.earth_date}" width="50" height="50" /> -->
+    <app-image class="tile" *ngFor="let photo of photos" [photoSrc]="photo.img_src"></app-image>
+</div>
