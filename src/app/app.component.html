@@ -1,4 +1,4 @@
 <div class="container">
-    <app-search-panel class="searchPanel"></app-search-panel>
-    <!-- <app-image-board></app-image-board> -->
+    <app-search-panel class="searchPanel" (firstRun)="isFirstRun=$event" appTrackScroll></app-search-panel>
+    <app-image-board *ngIf="!isFirstRun"></app-image-board>
 </div>

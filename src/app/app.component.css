@@ -7,11 +7,5 @@
     right: 0;
     bottom: 0;
     left: 0;
-}
-
-.container .searchPanel {}
-
-input[type='text'] {
-    border: none;
-    font-size: 30px;
+    transition: all ease-in-out 1s;
 }

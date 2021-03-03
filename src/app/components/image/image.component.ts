@@ -6,10 +6,9 @@ import { CuriosityCommunicationService } from 'src/app/services/curiosity-commun
   template: '<img [src]="photoSrc">',
   styles: ['img { width: 100%; height: auto; object-fit: cover }']
 })
-export class ImageComponent implements OnInit {
+export class ImageComponent implements OnInit{
   @Input() photoSrc: string;
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

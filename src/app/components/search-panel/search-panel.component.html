@@ -1,1 +1,15 @@
-<input type="text" name="searchInput" [value]="value" placeholder="Search a date to find out what Curiosity saw!" />
+<!-- <input type="text" name="searchInput" [value]="value" placeholder="Search a date to find out what Curiosity saw!" /> -->
+
+<!-- <mat-form-field class="searchInput" appearance="standard">
+    <mat-label>Search a date to find out what Curiosity saw!</mat-label>
+    <input matInput [matDatepicker]="picker" (dateInput)="onChange($event)">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
+
+<mat-form-field class="searchInput" appearance="standard">
+    <mat-label>Search a date to find out what Curiosity saw!</mat-label>
+    <input matInput [matDatepickerFilter]="outOfRange" [matDatepicker]="picker" (dateInput)="onChange($event)">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
