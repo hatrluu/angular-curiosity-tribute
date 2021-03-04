@@ -9,7 +9,7 @@
 
 <mat-form-field class="searchInput" appearance="standard">
     <mat-label>Search a date to find out what Curiosity saw!</mat-label>
-    <input matInput [matDatepickerFilter]="outOfRange" [matDatepicker]="picker" (dateInput)="onChange($event)">
+    <input matInput [matDatepickerFilter]="outOfRange" [matDatepicker]="picker" (dateInput)="onChange($event)" readonly>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
