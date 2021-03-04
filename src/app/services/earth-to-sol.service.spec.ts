@@ -10,7 +10,8 @@ describe('EarthToSolService', () => {
     service = TestBed.inject(EarthToSolService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should convert to 1000 sol', () => {
+    const oneThousandSol = new Date('5/31/2015');
+    expect(service.earthToSol(oneThousandSol)).toEqual(1000);
   });
 });

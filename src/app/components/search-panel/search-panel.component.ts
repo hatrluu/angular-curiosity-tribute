@@ -21,7 +21,7 @@ export class SearchPanelComponent {
     const sol = this.etl.earthToSol(event.value);
     this.cComService.solOnChange(sol);
     this.firstRun.emit(false);
-    window.scroll(0,0);
+    window.scroll(0, 0);
   }
 
   outOfRange(d: Date): boolean{
