@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostBinding, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appTrackScroll]'
@@ -7,7 +7,6 @@ export class TrackscrollDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   @HostListener('window:scroll', ['$event']) onScroll(e): void {
-    console.log(this.el);
     if (e.target.scrollingElement.scrollTop !== 0) {
       this.addClass(this.el.nativeElement);
     } else { this.removeClass(this.el.nativeElement); }
