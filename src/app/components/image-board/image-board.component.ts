@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { MarsConstant } from 'src/app/constants/mars-constant';
 import { CuriosityCommunicationService } from 'src/app/services/curiosity-communication.service';
 import { Photo } from '../../interfaces/photo';
 
@@ -13,6 +14,8 @@ export class ImageBoardComponent implements OnInit, OnDestroy {
   photos: Photo[];
   sol: number;
   solSubscription: Subscription;
+  landingDate = MarsConstant.landingDate.toLocaleDateString();
+  today = new Date().toLocaleDateString();
 
   constructor(private cComService: CuriosityCommunicationService) {
     this.photos = null;
